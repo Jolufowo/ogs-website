@@ -1,40 +1,50 @@
-.center-text {
-    text-align: center;
-}
-
-.center-content {
-    text-align: center;
+/* Updated style.css */
+.header-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-}
-
-.nav-container {
     text-align: center;
-    margin: 10px 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #ddd;
 }
 
-.nav-links {
+.site-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.nav-bar ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.nav-links li {
+.nav-bar ul li {
     display: inline;
-    margin: 0 10px;
 }
 
-.nav-links li a {
+.nav-bar ul li a {
     text-decoration: none;
     color: #007BFF;
     font-size: 18px;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
-.nav-links li a:hover {
-    text-decoration: underline;
+.nav-bar ul li a:hover {
+    color: #0056b3;
+}
+
+.hero-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
 }
 
 .leaders-section {
