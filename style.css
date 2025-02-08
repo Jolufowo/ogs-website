@@ -1,7 +1,7 @@
 /* style.css */
 .nav-bar {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px 0;
@@ -14,16 +14,25 @@
 .nav-bar ul {
     list-style: none;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 20px;
     font-size: 18px;
     font-weight: bold;
 }
 
 .hero-section {
     text-align: center;
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+.content-box {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .leaders-container {
@@ -50,36 +59,3 @@
     border-radius: 50%;
     object-fit: cover;
 }
-
-/* script.js */
-document.addEventListener("DOMContentLoaded", function() {
-    function revealOnScroll() {
-        let elements = document.querySelectorAll(".fade-in");
-        elements.forEach(el => {
-            let rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 50) {
-                el.classList.add("visible");
-            }
-        });
-    }
-    window.addEventListener("scroll", revealOnScroll);
-    
-    let alumni = [
-        "Abdul Oluwatobi Ganiu - Logistics Expert",
-        "Sofade Ayodele Olasile - Educator & Entrepreneur",
-        "Felix Fatai Odukoya - Hospitality Manager"
-    ];
-    document.getElementById("spotlightText").innerText = alumni[Math.floor(Math.random() * alumni.length)];
-    
-    function searchAlumni() {
-        let input = document.getElementById("searchBar").value.toLowerCase();
-        let items = document.querySelectorAll("#alumniList li");
-        items.forEach(item => {
-            item.style.display = item.innerText.toLowerCase().includes(input) ? "" : "none";
-        });
-    }
-    
-    function toggleDarkMode() {
-        document.body.classList.toggle("dark-mode");
-    }
-});
