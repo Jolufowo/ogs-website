@@ -1,3 +1,7 @@
+.center-text {
+    text-align: center;
+}
+
 .leaders-section {
     text-align: center;
     padding: 20px;
@@ -37,32 +41,5 @@
 }
 
 .bio-link:hover {
-    text-decoration: underline;
-}
-
-/* Improved Navigation Styling */
-nav {
-    text-align: center;
-    margin: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 5px 10px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #007BFF;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
     text-decoration: underline;
 }
