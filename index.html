@@ -11,7 +11,7 @@
     <header class="header-container">
         <nav class="nav-bar">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/">Home</a></li> <!-- ✅ Fixed Home Link -->
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
@@ -55,7 +55,25 @@
             </div>
         </div>
     </section>
-
+    
+    <div id="spotlight" class="fade-in">
+        <h3>Alumni Spotlight</h3>
+        <p id="spotlightText"></p>
+    </div>
+    
+    <div id="countdown" class="fade-in"></div>
+    
+    <input type="text" id="searchBar" placeholder="Search Alumni..." onkeyup="searchAlumni()">
+    <ul id="alumniList">
+        <li>Abdul Oluwatobi Ganiu</li>
+        <li>Sofade Ayodele Olasile</li>
+        <li>Felix Fatai Odukoya</li>
+        <li>Adesanya Adebowale Oluwagbenga</li>
+    </ul>
+    
+    <button id="backToTop" onclick="scrollToTop()">⬆ Back to Top</button>
+    <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+    
     <footer>
         <p>&copy; 2025 OGS Alumni. All rights reserved.</p>
     </footer>
