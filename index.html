@@ -23,13 +23,13 @@
     
     <marquee class="announcement">📢 Alumni Reunion 2025 - Stay Tuned for Updates! 🎉</marquee>
     
-    <section class="hero-section">
+    <section class="hero-section fade-in">
         <h2>Connecting Old Students</h2>
         <p>Welcome to the official website of the <strong>Odogbolu Grammar School 2011/2012 Alumni Association</strong>.</p>
         <p>Stay connected, view events, and engage with fellow alumni.</p>
     </section>
     
-    <section class="leaders-section">
+    <section class="leaders-section fade-in">
         <h2>Meet Our Leaders</h2>
         <div class="leaders-container">
             <div class="leader">
@@ -50,7 +50,21 @@
         </div>
     </section>
     
-    <div id="countdown"></div>
+    <div id="spotlight" class="fade-in">
+        <h3>Alumni Spotlight</h3>
+        <p id="spotlightText"></p>
+    </div>
+    
+    <div id="countdown" class="fade-in"></div>
+    
+    <input type="text" id="searchBar" placeholder="Search Alumni..." onkeyup="searchAlumni()">
+    <ul id="alumniList">
+        <li>Abdul Oluwatobi Ganiu</li>
+        <li>Sofade Ayodele Olasile</li>
+        <li>Felix Fatai Odukoya</li>
+    </ul>
+    
+    <button id="backToTop" onclick="scrollToTop()">⬆ Back to Top</button>
     
     <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
     
@@ -58,18 +72,6 @@
         <p>&copy; 2025 OGS Alumni. All rights reserved.</p>
     </footer>
     
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
-        }
-
-        const eventDate = new Date("December 31, 2025 23:59:59").getTime();
-        setInterval(() => {
-            const now = new Date().getTime();
-            const distance = eventDate - now;
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            document.getElementById("countdown").innerHTML = "⏳ " + days + " Days Left!";
-        }, 1000);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
