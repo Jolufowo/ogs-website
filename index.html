@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>OGS 2011/2012 Alumni</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
 <body>
+    <!-- Navigation Header -->
     <header class="header-container">
         <nav class="nav-bar">
             <ul>
@@ -19,17 +20,20 @@
             </ul>
         </nav>
     </header>
-    
+
+    <!-- Announcement Banner -->
     <marquee class="announcement">📢 Alumni Reunion 2025 - Stay Tuned for Updates! 🎉</marquee>
-    
+
+    <!-- Hero Section -->
     <section class="hero-section fade-in">
         <div class="content-box">
-            <h2>Connecting Old Students</h2>
+            <h1>Connecting Old Students</h1>
             <p>Welcome to the official website of the <strong>Odogbolu Grammar School 2011/2012 Alumni Association</strong>.</p>
             <p>Stay connected, view events, and engage with fellow alumni.</p>
         </div>
     </section>
-    
+
+    <!-- Leaders Section -->
     <section class="leaders-section fade-in">
         <h2>Meet Our Leaders</h2>
         <div class="leaders-container">
@@ -55,14 +59,17 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- Alumni Spotlight -->
     <div id="spotlight" class="fade-in">
         <h3>Alumni Spotlight</h3>
         <p id="spotlightText"></p>
     </div>
-    
+
+    <!-- Countdown Timer -->
     <div id="countdown" class="fade-in"></div>
-    
+
+    <!-- Search Alumni -->
     <input type="text" id="searchBar" placeholder="Search Alumni..." onkeyup="searchAlumni()">
     <ul id="alumniList">
         <li>Abdul Oluwatobi Ganiu</li>
@@ -70,10 +77,12 @@
         <li>Felix Fatai Odukoya</li>
         <li>Adesanya Adebowale Oluwagbenga</li>
     </ul>
-    
+
+    <!-- Utility Buttons -->
     <button id="backToTop" onclick="scrollToTop()">⬆ Back to Top</button>
     <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
-    
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 OGS Alumni. All rights reserved.</p>
     </footer>
