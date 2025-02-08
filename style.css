@@ -1,55 +1,46 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.3s, color 0.3s;
+/* style.css */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.header-container {
+.announcement {
     width: 100%;
+    background-color: #ffd700;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
     text-align: center;
-    padding: 20px 0;
-    background: linear-gradient(to right, #007BFF, #0056b3);
-    color: white;
-    border-bottom: 3px solid #0056b3;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.nav-bar ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-}
-
-.leaders-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.leader-card {
-    background: white;
+#spotlight {
+    background: #f8f9fa;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 300px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-.leader-card img {
-    width: 100%;
-    border-radius: 8px;
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#backToTop:hover {
+    background: #0056b3;
 }
 
 .dark-mode {
@@ -73,3 +64,52 @@ body {
     font-weight: bold;
     margin-top: 20px;
 }
+
+/* script.js */
+document.addEventListener("DOMContentLoaded", function() {
+    function revealOnScroll() {
+        let elements = document.querySelectorAll(".fade-in");
+        elements.forEach(el => {
+            let rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 50) {
+                el.classList.add("visible");
+            }
+        });
+    }
+    window.addEventListener("scroll", revealOnScroll);
+    
+    let alumni = [
+        "Abdul Oluwatobi Ganiu - Logistics Expert",
+        "Sofade Ayodele Olasile - Educator & Entrepreneur",
+        "Felix Fatai Odukoya - Hospitality Manager"
+    ];
+    document.getElementById("spotlightText").innerText = alumni[Math.floor(Math.random() * alumni.length)];
+    
+    document.getElementById("searchBar").addEventListener("keyup", function() {
+        let input = this.value.toLowerCase();
+        let items = document.querySelectorAll("#alumniList li");
+        items.forEach(item => {
+            item.style.display = item.innerText.toLowerCase().includes(input) ? "" : "none";
+        });
+    });
+    
+    document.querySelector("button[onclick='toggleDarkMode()']").addEventListener("click", function() {
+        document.body.classList.toggle("dark-mode");
+    });
+    
+    const eventDate = new Date("December 31, 2025 23:59:59").getTime();
+    setInterval(() => {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        document.getElementById("countdown").innerHTML = "⏳ " + days + " Days Left!";
+    }, 1000);
+    
+    document.getElementById("backToTop").addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    
+    window.onscroll = function() {
+        document.getElementById("backToTop").style.display = window.scrollY > 300 ? "block" : "none";
+    };
+});
