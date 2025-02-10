@@ -17,65 +17,33 @@ body {
 
 /* Header & Navigation */
 .header-container {
-    background: #007BFF;
-    padding: 15px 0;
-    width: 100%;
-    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.nav-bar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+.navbar-brand {
+    font-weight: bold;
+    color: #007BFF;
 }
 
-.nav-bar ul li {
-    display: inline;
+.navbar-nav .nav-link {
+    color: #333;
+    transition: color 0.3s;
 }
 
-.nav-bar ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding: 10px 15px;
-    display: block;
-}
-
-/* Make navigation mobile-friendly */
-@media (max-width: 768px) {
-    .nav-bar ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .nav-bar ul li a {
-        font-size: 16px;
-        padding: 8px 12px;
-    }
+.navbar-nav .nav-link:hover {
+    color: #007BFF;
 }
 
 /* Hero Section */
 .hero-section {
-    max-width: 90%;
-    margin: 20px auto;
-    padding: 20px;
-    text-align: center;
+    color: white;
+    padding: 100px 0;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Leaders Section */
-.leaders-container {
-    display: flex;
-    flex-wrap: wrap; /* Ensures responsiveness */
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-/* Leader Cards */
 .leader-card {
     background: white;
     padding: 15px;
@@ -84,51 +52,39 @@ body {
     text-align: center;
 }
 
-/* Leader Images */
 .leader-img {
     width: 100%;
-    max-width: 150px; /* Smaller image size */
+    max-width: 150px;
     height: auto;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
 }
 
-/* Ensure side-by-side layout on larger screens */
-@media (min-width: 768px) {
-    .leader-card {
-        flex: 1 0 21%; /* Four cards per row */
-    }
-}
-
-@media (min-width: 1024px) {
-    .leader-card {
-        flex: 1 0 22%; /* Four cards per row */
-    }
+.card-title {
+    font-size: 1.25rem;
+    margin-top: 10px;
 }
 
 /* Footer */
 footer {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #007BFF;
-    color: white;
-    text-align: center;
-    width: 100%;
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    color: #333;
 }
 
 /* Make text and sections readable on mobile */
 @media (max-width: 600px) {
     h1 {
-        font-size: 22px;
+        font-size: 2rem;
     }
 
     h2 {
-        font-size: 18px;
+        font-size: 1.5rem;
     }
 
     p {
-        font-size: 16px;
+        font-size: 1rem;
         line-height: 1.5;
     }
 }
