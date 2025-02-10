@@ -17,45 +17,8 @@ body {
 
 /* Header & Navigation */
 .header-container {
-    background: #007BFF;
-    padding: 15px 0;
     width: 100%;
     text-align: center;
-}
-
-.nav-bar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-}
-
-.nav-bar ul li {
-    display: inline;
-}
-
-.nav-bar ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding: 10px 15px;
-    display: block;
-}
-
-/* Make navigation mobile-friendly */
-@media (max-width: 768px) {
-    .nav-bar ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .nav-bar ul li a {
-        font-size: 16px;
-        padding: 8px 12px;
-    }
 }
 
 /* Hero Section */
@@ -73,40 +36,6 @@ body {
     justify-content: center;
     gap: 20px;
     padding: 20px;
-}
-
-/* Leader Cards */
-.leader-card {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 90%; /* Default width for smaller screens */
-    max-width: 400px; /* Prevents it from being too large */
-    text-align: center;
-}
-
-/* Leader Images */
-.leader-img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-/* Ensure side-by-side layout on larger screens */
-@media (min-width: 768px) {
-    .leader-card {
-        width: 45%;
-    }
-}
-
-@media (min-width: 1024px) {
-    .leader-card {
-        width: 22%;
-    }
 }
 
 /* Footer */
