@@ -42,13 +42,14 @@
         </section>
     </main>
 
-    <!-- Image Zoom Modal -->
+    <!-- Image Modal (Full-Screen) -->
     <div id="imageModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImage">
         <div class="zoom-buttons">
             <button onclick="zoomIn()">🔍 Zoom In</button>
             <button onclick="zoomOut()">🔍 Zoom Out</button>
+            <button onclick="closeModal()">⬅ Back</button>
         </div>
     </div>
 
