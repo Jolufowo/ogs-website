@@ -1,62 +1,157 @@
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Document is ready!');
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    // Countdown Timer
-    const countdown = document.getElementById('countdown');
-    const eventDate = new Date('2025-12-31T00:00:00Z').getTime();
+/* Make sure the body takes the full height */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
 
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = eventDate - now;
+/* Header & Navigation */
+.header-container {
+    background: #007BFF;
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+}
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+.nav-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
 
-        countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+.nav-bar ul li {
+    display: inline;
+}
 
-        if (distance < 0) {
-            clearInterval(timer);
-            countdown.innerHTML = "EXPIRED";
-        }
+.nav-bar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Make navigation mobile-friendly */
+@media (max-width: 768px) {
+    .nav-bar ul {
+        flex-direction: column;
+        gap: 10px;
     }
 
-    const timer = setInterval(updateCountdown, 1000);
-
-    // Back to Top Button
-    const backToTopBtn = document.getElementById('backToTop');
-    window.onscroll = function() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            backToTopBtn.style.display = 'block';
-        } else {
-            backToTopBtn.style.display = 'none';
-        }
-    };
-
-    // Dark Mode Toggle
-    const toggleDarkModeBtn = document.querySelector('button[onclick="toggleDarkMode()"]');
-    toggleDarkModeBtn.addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-    });
-});
-
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    .nav-bar ul li a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
 }
 
-function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
+/* Hero Section */
+.hero-section {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #e9ecef;
+    color: #333;
 }
 
-function searchAlumni() {
-    const input = document.getElementById('searchBar');
-    const filter = input.value.toLowerCase();
-    const ul = document.getElementById('alumniList');
-    const li = ul.getElementsByTagName('li');
+/* Leaders Section */
+.leaders-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
 
-    for (let i = 0; i < li.length; i++) {
-        const txtValue = li[i].textContent || li[i].innerText;
-        li[i].style.display = txtValue.toLowerCase().indexOf(filter) > -1 ? '' : 'none';
+/* Leader Cards */
+.leader-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Default width for smaller screens */
+    max-width: 400px; /* Prevents it from being too large */
+    text-align: center;
+}
+
+/* Leader Images */
+.leader-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+blockquote {
+    border-left: 5px solid #007BFF;
+    padding-left: 15px;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+/* Event Calendar */
+#eventCalendar {
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.footer .social-icons {
+    margin-top: 10px;
+}
+
+.footer .social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer .social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Make text and sections readable on mobile */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
     }
 }
