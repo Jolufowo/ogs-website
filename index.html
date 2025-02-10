@@ -11,14 +11,14 @@
 </head>
 <body>
     <!-- Navigation Header -->
-    <header class="header-container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <header class="header-container bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light container">
             <a class="navbar-brand" href="#">OGS Alumni</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -29,13 +29,8 @@
         </nav>
     </header>
 
-    <!-- Announcement Banner -->
-    <div class="alert alert-primary text-center" role="alert">
-        📢 Alumni Reunion 2025 - Stay Tuned for Updates! 🎉
-    </div>
-
     <!-- Hero Section -->
-    <section class="hero-section text-center">
+    <section class="hero-section text-center bg-primary text-white py-5" style="background-image: url('images/hero.jpg'); background-size: cover; background-position: center;">
         <div class="container">
             <h1 class="display-4">Connecting Old Students</h1>
             <p class="lead">Welcome to the official website of the <strong>Odogbolu Grammar School 2011/2012 Alumni Association</strong>.</p>
@@ -43,13 +38,18 @@
         </div>
     </section>
 
+    <!-- Announcement Banner -->
+    <div class="alert alert-info text-center" role="alert">
+        📢 Alumni Reunion 2025 - Stay Tuned for Updates! 🎉
+    </div>
+
     <!-- Leaders Section -->
-    <section class="leaders-section text-center">
+    <section class="leaders-section text-center py-5">
         <div class="container">
             <h2>Meet Our Leaders</h2>
             <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="leader-card card">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
                         <img src="leaders/president.jpg" alt="President" class="card-img-top leader-img">
                         <div class="card-body">
                             <h3 class="card-title">Abdul Oluwatobi Ganiu "Kayman"</h3>
@@ -57,8 +57,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="leader-card card">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
                         <img src="leaders/vice_president.jpg" alt="Vice President" class="card-img-top leader-img">
                         <div class="card-body">
                             <h3 class="card-title">Sofade Ayodele Olasile</h3>
@@ -66,8 +66,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="leader-card card">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
                         <img src="leaders/secretary.jpg" alt="Secretary" class="card-img-top leader-img">
                         <div class="card-body">
                             <h3 class="card-title">Felix Fatai Odukoya</h3>
@@ -75,8 +75,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="leader-card card">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
                         <img src="leaders/pro.jpg" alt="Public Relations Officer" class="card-img-top leader-img">
                         <div class="card-body">
                             <h3 class="card-title">Adesanya Adebowale Oluwagbenga</h3>
@@ -89,18 +89,22 @@
     </section>
 
     <!-- Alumni Spotlight -->
-    <div id="spotlight" class="text-center py-5">
+    <section class="text-center py-5 bg-light">
         <div class="container">
             <h3>Alumni Spotlight</h3>
             <p id="spotlightText"></p>
         </div>
-    </div>
+    </section>
 
     <!-- Countdown Timer -->
-    <div id="countdown" class="text-center py-5"></div>
+    <section class="text-center py-5">
+        <div class="container">
+            <div id="countdown"></div>
+        </div>
+    </section>
 
     <!-- Search Alumni -->
-    <div class="container text-center py-5">
+    <section class="container text-center py-5">
         <input type="text" id="searchBar" class="form-control" placeholder="Search Alumni..." onkeyup="searchAlumni()">
         <ul id="alumniList" class="list-group mt-3">
             <li class="list-group-item">Abdul Oluwatobi Ganiu</li>
@@ -108,7 +112,7 @@
             <li class="list-group-item">Felix Fatai Odukoya</li>
             <li class="list-group-item">Adesanya Adebowale Oluwagbenga</li>
         </ul>
-    </div>
+    </section>
 
     <!-- Utility Buttons -->
     <div class="text-center py-5">
