@@ -81,15 +81,13 @@ body {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 90%; /* Default width for smaller screens */
-    max-width: 400px; /* Prevents it from being too large */
     text-align: center;
 }
 
 /* Leader Images */
 .leader-img {
     width: 100%;
-    max-width: 250px;
+    max-width: 150px; /* Smaller image size */
     height: auto;
     border-radius: 50%;
     object-fit: cover;
@@ -99,13 +97,13 @@ body {
 /* Ensure side-by-side layout on larger screens */
 @media (min-width: 768px) {
     .leader-card {
-        width: 45%;
+        flex: 1 0 21%; /* Four cards per row */
     }
 }
 
 @media (min-width: 1024px) {
     .leader-card {
-        width: 22%;
+        flex: 1 0 22%; /* Four cards per row */
     }
 }
 
