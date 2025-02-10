@@ -64,8 +64,6 @@ body {
     margin: 20px auto;
     padding: 20px;
     text-align: center;
-    background-color: #e9ecef;
-    color: #333;
 }
 
 /* Leaders Section */
@@ -98,22 +96,17 @@ body {
     margin-bottom: 10px;
 }
 
-/* Testimonials Section */
-.testimonials-section {
-    background-color: #f8f9fa;
-    padding: 60px 0;
+/* Ensure side-by-side layout on larger screens */
+@media (min-width: 768px) {
+    .leader-card {
+        width: 45%;
+    }
 }
 
-blockquote {
-    border-left: 5px solid #007BFF;
-    padding-left: 15px;
-    margin: 20px 0;
-    font-style: italic;
-}
-
-/* Event Calendar */
-#eventCalendar {
-    margin-top: 20px;
+@media (min-width: 1024px) {
+    .leader-card {
+        width: 22%;
+    }
 }
 
 /* Footer */
@@ -124,20 +117,6 @@ footer {
     color: white;
     text-align: center;
     width: 100%;
-}
-
-.footer .social-icons {
-    margin-top: 10px;
-}
-
-.footer .social-icons a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-.footer .social-icons img {
-    width: 24px;
-    height: 24px;
 }
 
 /* Make text and sections readable on mobile */
