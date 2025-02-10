@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>OGS 2011/2012 Alumni</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script defer src="js/bootstrap.bundle.min.js"></script>
     <script defer src="js/scripts.js"></script>
 </head>
 <body>
     <!-- Navigation Header -->
     <header class="header-container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand" href="#">OGS Alumni</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -30,56 +29,56 @@
     </header>
 
     <!-- Announcement Banner -->
-    <div class="alert alert-primary text-center" role="alert">
+    <div class="alert alert-info text-center" role="alert">
         📢 Alumni Reunion 2025 - Stay Tuned for Updates! 🎉
     </div>
 
     <!-- Hero Section -->
-    <section class="hero-section text-center">
-        <div class="container">
-            <h1 class="display-4">Connecting Old Students</h1>
-            <p class="lead">Welcome to the official website of the <strong>Odogbolu Grammar School 2011/2012 Alumni Association</strong>.</p>
+    <section class="hero-section text-center my-5">
+        <div class="content-box">
+            <h1>Connecting Old Students</h1>
+            <p>Welcome to the official website of the <strong>Odogbolu Grammar School 2011/2012 Alumni Association</strong>.</p>
             <p>Stay connected, view events, and engage with fellow alumni.</p>
         </div>
     </section>
 
     <!-- Leaders Section -->
-    <section class="leaders-section text-center">
+    <section class="leaders-section my-5">
+        <h2 class="text-center">Meet Our Leaders</h2>
         <div class="container">
-            <h2>Meet Our Leaders</h2>
             <div class="row">
                 <div class="col-md-3">
-                    <div class="leader-card card">
-                        <img src="leaders/president.jpg" alt="President" class="card-img-top leader-img">
+                    <div class="card">
+                        <img src="leaders/president.jpg" class="card-img-top" alt="President">
                         <div class="card-body">
-                            <h3 class="card-title">Abdul Oluwatobi Ganiu "Kayman"</h3>
+                            <h5 class="card-title">Abdul Oluwatobi Ganiu "Kayman"</h5>
                             <a href="leaders/president.html" class="btn btn-primary">View Biography</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="leader-card card">
-                        <img src="leaders/vice_president.jpg" alt="Vice President" class="card-img-top leader-img">
+                    <div class="card">
+                        <img src="leaders/vice_president.jpg" class="card-img-top" alt="Vice President">
                         <div class="card-body">
-                            <h3 class="card-title">Sofade Ayodele Olasile</h3>
+                            <h5 class="card-title">Sofade Ayodele Olasile</h5>
                             <a href="leaders/vice_president.html" class="btn btn-primary">View Biography</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="leader-card card">
-                        <img src="leaders/secretary.jpg" alt="Secretary" class="card-img-top leader-img">
+                    <div class="card">
+                        <img src="leaders/secretary.jpg" class="card-img-top" alt="Secretary">
                         <div class="card-body">
-                            <h3 class="card-title">Felix Fatai Odukoya</h3>
+                            <h5 class="card-title">Felix Fatai Odukoya</h5>
                             <a href="leaders/secretary.html" class="btn btn-primary">View Biography</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="leader-card card">
-                        <img src="leaders/pro.jpg" alt="Public Relations Officer" class="card-img-top leader-img">
+                    <div class="card">
+                        <img src="leaders/pro.jpg" class="card-img-top" alt="Public Relations Officer">
                         <div class="card-body">
-                            <h3 class="card-title">Adesanya Adebowale Oluwagbenga</h3>
+                            <h5 class="card-title">Adesanya Adebowale Oluwagbenga</h5>
                             <a href="leaders/pro.html" class="btn btn-primary">View Biography</a>
                         </div>
                     </div>
@@ -89,20 +88,18 @@
     </section>
 
     <!-- Alumni Spotlight -->
-    <div id="spotlight" class="text-center py-5">
-        <div class="container">
-            <h3>Alumni Spotlight</h3>
-            <p id="spotlightText"></p>
-        </div>
+    <div id="spotlight" class="text-center my-5">
+        <h3>Alumni Spotlight</h3>
+        <p id="spotlightText"></p>
     </div>
 
     <!-- Countdown Timer -->
-    <div id="countdown" class="text-center py-5"></div>
+    <div id="countdown" class="text-center my-5"></div>
 
     <!-- Search Alumni -->
-    <div class="container text-center py-5">
+    <div class="container my-5">
         <input type="text" id="searchBar" class="form-control" placeholder="Search Alumni..." onkeyup="searchAlumni()">
-        <ul id="alumniList" class="list-group mt-3">
+        <ul id="alumniList" class="list-group my-3">
             <li class="list-group-item">Abdul Oluwatobi Ganiu</li>
             <li class="list-group-item">Sofade Ayodele Olasile</li>
             <li class="list-group-item">Felix Fatai Odukoya</li>
@@ -111,16 +108,18 @@
     </div>
 
     <!-- Utility Buttons -->
-    <div class="text-center py-5">
+    <div class="text-center my-5">
         <button id="backToTop" class="btn btn-secondary" onclick="scrollToTop()">⬆ Back to Top</button>
         <button class="btn btn-dark" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
     </div>
 
     <!-- Footer -->
-    <footer class="footer bg-light py-3">
-        <div class="container text-center">
-            <p>&copy; 2025 OGS Alumni. All rights reserved.</p>
-        </div>
+    <footer class="bg-primary text-white text-center py-3">
+        <p>&copy; 2025 OGS Alumni. All rights reserved.</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
