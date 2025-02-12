@@ -36,3 +36,24 @@ window.onclick = function(event) {
         closeModal();
     }
 };
+
+// Mark Past Events
+function markPastEvents() {
+    const currentDate = new Date();
+    const eventCards = document.querySelectorAll('.event-card');
+    
+    eventCards.forEach(card => {
+        const eventDate = new Date(card.getAttribute('data-event-date'));
+        
+        if (currentDate > eventDate) {
+            const pastEventLabel = document.createElement('p');
+            pastEventLabel.className = 'past-event';
+            pastEventLabel.innerText = 'Past Event';
+            
+            card.appendChild(pastEventLabel);
+        }
+    });
+}
+
+// Run markPastEvents on page load
+document.addEventListener('DOMContentLoaded', markPastEvents);
