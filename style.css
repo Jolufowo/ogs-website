@@ -207,3 +207,9 @@ footer {
 .zoom-controls button:hover {
     background-color: #0056b3;
 }
+
+/* Past Event Label */
+.past-event {
+    color: red;
+    font-weight: bold;
+}
