@@ -116,6 +116,17 @@ body {
     margin-bottom: 20px;
 }
 
+/* Membership Fee Announcement Section */
+.membership-fee-announcement {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
 /* Testimonials Section */
 .testimonials-section {
     background-color: #007BFF;
