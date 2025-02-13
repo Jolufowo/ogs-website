@@ -144,6 +144,27 @@ body {
     margin-bottom: 10px;
 }
 
+/* Contact Information Section */
+.contact-info-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 2px solid #007BFF;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.contact-info-section a {
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-info-section a:hover {
+    text-decoration: underline;
+}
+
 /* Footer */
 footer {
     background-color: #0056b3;
