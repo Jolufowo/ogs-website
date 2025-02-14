@@ -206,43 +206,4 @@ footer {
 }
 
 .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.zoom-controls {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.zoom-controls button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.zoom-controls button:hover {
-    background-color: #0056b3;
-}
-
-/* Past Event Label */
-.past-event {
-    color: red;
-    font-weight: bold;
-}
-``` ▋
+    position: ▋
