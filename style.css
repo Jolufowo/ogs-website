@@ -1,3 +1,4 @@
+/* General Reset */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -6,7 +7,7 @@ body {
     text-align: center;
 }
 
-/* Navigation */
+/* Navigation Bar */
 .header-container {
     background: linear-gradient(to right, #007BFF, #0056b3);
     padding: 20px;
@@ -19,62 +20,66 @@ body {
     display: flex;
     justify-content: center;
     gap: 30px;
-}
-
-.nav-bar ul li {
-    display: inline;
+    flex-wrap: wrap;
 }
 
 .nav-bar ul li a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-}
-
-/* Hero Section */
-.hero-section {
-    background-color: #007BFF;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
 }
 
 /* Leaders Section */
 .leaders-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .leader-card {
     background: white;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 250px;
+    text-align: center;
 }
 
 .leader-img {
     width: 100%;
-    height: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .header-container {
+    background: linear-gradient(to right, #222, #555);
+}
+
+/* Image Modal */
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 80%;
     border-radius: 10px;
 }
 
-/* Events */
-.events-section {
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-.event-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* Contact */
-.contact-info-section {
-    background-color: #f4f4f4;
-    padding: 20px;
+.zoom-controls {
+    text-align: center;
+    margin-top: 20px;
 }
