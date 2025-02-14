@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Announcements</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your existing stylesheet -->
-    <script defer src="script.js"></script> <!-- Link to your existing script file -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Header and Navigation -->
+
+    <!-- Navigation -->
     <header class="header-container">
         <nav class="nav-bar">
             <ul>
@@ -16,79 +17,27 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="announcements.html">Announcements</a></li> <!-- New Link for Announcements Page -->
-                <li><a href="https://kahoot.it">Play Kahoot</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Announcements Section -->
-    <section class="announcements-section">
-        <h2>Announcements</h2>
+    <section class="announcements-section fade-in">
+        <h2>📢 Announcements & Past Events</h2>
+
         <div class="announcement-card" data-event-date="2025-02-13">
             <h3>💖 Reigniting Relationships - Valentine’s Celebration (February 13th)</h3>
             <p class="status"></p>
-            <p>Celebrate love, friendship, and togetherness at our special Valentine’s Day Alumni Gathering! This event is all about rekindling old friendships and creating new connections within our alumni community.</p>
-            <p>🎁 Exciting gifts & surprises await!</p>
+            <p>Celebrate love, friendship, and togetherness at our special Valentine’s Day Alumni Gathering!</p>
+            <p>🎁 Exciting gifts & surprises awaited!</p>
             <p>🎶 Enjoy entertainment, laughter, and unforgettable moments!</p>
-        </div>
-        <div class="announcement-card" data-event-date="2025-02-15">
-            <h3>🎮 OGS Alumni Game Night - Kahoot Challenge (February 15th, Saturday)</h3>
-            <p class="status"></p>
-            <p>Get ready for an electrifying night of fun, competition, and BIG prizes at the OGS Alumni Game Night on Kahoot!</p>
-            <p>🕗 8:00 PM - Valentine’s Game Night 💖</p>
-            <p>💡 A special Valentine-themed trivia challenge to test your knowledge on love, relationships, and all things Valentine!</p>
-            <p>🕘 9:00 PM - Group Standard Game Night 🏆</p>
-            <p>🌍 A general knowledge showdown covering a mix of fun and challenging questions for everyone!</p>
-            <p>🏅 BIG PRIZES will be won in both games, so bring your A-game and get ready to play & win!</p>
-        </div>
-        <div class="announcement-card" data-event-date="2025-02-15">
-            <h3>🌟 Valentine's Special Game Announcement! 🌟 (February 15th)</h3>
-            <p class="status"></p>
-            <p>Join us tomorrow for our exciting Valentine's themed games!</p>
-            <p>The first game offers a chance to win ₦10,000, while the second will have a prize of ₦5,000.</p>
-            <p>For our standard game, we’ll have 100 trivia questions. This format allows for a great catch-up opportunity in case you start late or encounter any network issues.</p>
-            <p>Here’s how the prizes for the standard game are structured:</p>
-            <ul>
-                <li>1st Place: ₦25,000</li>
-                <li>2nd Place: ₦15,000</li>
-                <li>3rd Place: ₦10,000</li>
-            </ul>
-            <p>We encourage everyone to give their best effort, as winners are not obligated to use their prizes for giveaways. Please note, this will be the last game before we enforce disqualifications for those who haven’t paid their group levy of just ₦2,000. Remember, you won’t be entitled to any benefits if your levy isn’t paid.</p>
-            <p>Stay updated by visiting our alumni website: <a href="https://ogs2012alumni.com/">ogs2012alumni.com</a>.</p>
-            <p>Love always,</p>
-            <p>The Valentine's themed game kicks off at 8 PM, followed by the standard group games at 9 PM. We may start earlier than 9, depending on how quickly we wrap up the first game. Get ready for some fun!</p>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2025 OGS Alumni. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank">Facebook</a>
-            <a href="https://twitter.com" target="_blank">Twitter</a>
-            <a href="https://instagram.com" target="_blank">Instagram</a>
-        </div>
     </footer>
 
-    <!-- Script to Mark Past and Active Events -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentDate = new Date();
-            const announcementCards = document.querySelectorAll('.announcement-card');
-            
-            announcementCards.forEach(card => {
-                const eventDate = new Date(card.getAttribute('data-event-date'));
-                const statusElement = card.querySelector('.status');
-                
-                if (currentDate > eventDate) {
-                    statusElement.innerText = 'Past Event';
-                    statusElement.style.color = 'red';
-                } else {
-                    statusElement.innerText = 'Active Event';
-                    statusElement.style.color = 'green';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
