@@ -22,6 +22,8 @@
         </nav>
     </header>
 
+    <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+
     <!-- Hero Section -->
     <section class="hero-section fade-in">
         <div class="content-box">
@@ -58,45 +60,19 @@
         </div>
     </section>
 
-    <!-- Events Section -->
-    <section class="events-section fade-in">
-        <h2>🎉 Upcoming Events</h2>
-        <div class="event-card" data-event-date="2025-02-13">
-            <h3>💖 Reigniting Relationships - Valentine’s Celebration (February 13th)</h3>
-            <p>Join us for a fun-filled Valentine’s celebration! Exciting gifts, entertainment, and memories await.</p>
-        </div>
-        <div class="event-card" data-event-date="2025-02-15">
-            <h3>🎮 OGS Alumni Game Night - Kahoot Challenge (February 15th)</h3>
-            <p>8:00 PM - Valentine’s Game Night 💖 | 9:00 PM - Group Standard Game Night 🏆 | BIG PRIZES TO BE WON! 🎉</p>
-        </div>
-    </section>
-
-    <!-- Membership Fee Announcement -->
-    <section class="membership-fee-announcement fade-in">
-        <h2>📢 Monthly Membership Fee</h2>
-        <p>Support our alumni network by paying ₦2,000 monthly to:</p>
-        <p><strong>Jimoh Titilope | Account: 8138682604 | Bank: OPay</strong></p>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-info-section fade-in">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:info@ogs2012alumni.com">info@ogs2012alumni.com</a></p>
-        <p>Phone: <a href="tel:+2348149390170">+234 814 939 0170</a></p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 OGS Alumni. All rights reserved.</p>
-    </footer>
-
     <!-- Image Modal -->
     <div id="imageModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImage">
         <div class="zoom-controls">
-            <button onclick="zoomIn()">Zoom In</button>
-            <button onclick="zoomOut()">Zoom Out</button>
+            <button onclick="zoomIn()">🔍 Zoom In</button>
+            <button onclick="zoomOut()">🔍 Zoom Out</button>
+            <button onclick="closeModal()">⬅ Back</button>
         </div>
     </div>
+
+    <footer>
+        <p>&copy; 2025 OGS Alumni. All rights reserved.</p>
+    </footer>
 </body>
 </html>
