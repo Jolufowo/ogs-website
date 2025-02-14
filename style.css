@@ -7,79 +7,83 @@ body {
     text-align: center;
 }
 
-/* Navigation Bar */
-.header-container {
-    background: linear-gradient(to right, #007BFF, #0056b3);
-    padding: 20px;
-    text-align: center;
-}
-
-.nav-bar ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.nav-bar ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* Leaders Section */
-.leaders-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.leader-card {
+/* Contact Form Styling */
+.contact-form {
+    max-width: 500px;
+    margin: auto;
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    text-align: center;
+    text-align: left;
 }
 
-.leader-img {
+.contact-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-form input, 
+.contact-form textarea {
     width: 100%;
-    border-radius: 10px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    margin-top: 10px;
     cursor: pointer;
 }
 
-/* Dark Mode */
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Social Buttons Animation */
+.social-btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background: #0056b3;
+}
+
+/* Map Styling */
+.map {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Dark Mode Styling */
 .dark-mode {
     background-color: #121212;
     color: white;
 }
 
-.dark-mode .header-container {
-    background: linear-gradient(to right, #222, #555);
+.dark-mode .contact-form {
+    background: #222;
+    color: white;
 }
 
-/* Image Modal */
-.modal {
-    display: none;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    max-width: 80%;
-    border-radius: 10px;
-}
-
-.zoom-controls {
-    text-align: center;
-    margin-top: 20px;
+.dark-mode .contact-form input, 
+.dark-mode .contact-form textarea {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
 }
