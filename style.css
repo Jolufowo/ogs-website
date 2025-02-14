@@ -7,19 +7,48 @@ body {
     text-align: center;
 }
 
-/* Centered Navigation Bar */
+/* Responsive Design */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sticky Navigation Bar */
 .header-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     background: linear-gradient(to right, #007BFF, #0056b3);
-    padding: 20px;
+    padding: 15px 0;
     text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Centered Navigation */
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-bar ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center navigation */
+    justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .nav-bar ul li {
@@ -45,23 +74,26 @@ body {
     padding: 20px;
     border-radius: 10px;
     width: 80%;
-    margin: 20px auto;
+    margin: 80px auto 20px; /* Adjusted for fixed navbar */
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .hero-section h2 {
-    font-size: 24px;
+    font-size: 28px;
 }
 
 /* Leaders Section */
 .leaders-section {
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
+/* Leaders Side-by-Side */
 .leaders-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Ensures images are side by side */
+    justify-content: center;
     gap: 20px;
     padding: 20px;
 }
@@ -74,15 +106,21 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 250px;
     text-align: center;
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Leader Image Hover Effect */
 .leader-img {
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
-    height: 250px; /* Ensures consistency in image display */
+    height: 250px;
     margin-bottom: 10px;
-    cursor: pointer; /* Pointer cursor for clickable images */
+    cursor: pointer;
+}
+
+.leader-img:hover {
+    transform: scale(1.05);
 }
 
 /* Biography Link */
@@ -91,7 +129,7 @@ body {
     color: #007BFF;
     font-weight: bold;
     text-decoration: none;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .bio-link:hover {
@@ -114,6 +152,35 @@ body {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+}
+
+/* Announcements Section */
+.announcements-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.announcement-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.announcement-card h3 {
+    color: #007BFF;
+}
+
+.announcement-card p {
+    line-height: 1.6;
+}
+
+.status {
+    font-weight: bold;
 }
 
 /* Membership Fee Announcement Section */
@@ -208,4 +275,61 @@ footer {
 .close {
     position: absolute;
     top: 15px;
- ▋
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.zoom-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.zoom-controls button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.zoom-controls button:hover {
+    background: #FFD700;
+    color: #0056b3;
+}
+
+/* Mobile Responsive Navigation */
+@media (max-width: 768px) {
+    .nav-bar ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-bar ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+        margin: 10px;
+    }
+
+    .leaders-container {
+        flex-direction: column;
+    }
+}
