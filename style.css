@@ -1,34 +1,28 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-/* Header & Navigation Bar */
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
 .header-container {
     background: linear-gradient(to right, #007BFF, #0056b3);
     padding: 20px;
     text-align: center;
-    width: 100%;
 }
 
 .nav-bar ul {
     list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; /* Ensures proper mobile responsiveness */
-}
-
-.nav-bar ul li {
-    display: inline;
 }
 
 .nav-bar ul li a {
@@ -36,25 +30,9 @@ body {
     color: white;
     font-size: 20px;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
-.nav-bar ul li a:hover {
-    color: #FFD700;
-}
-
-/* Ensure the hero section text is centered */
-.hero-section {
-    background-color: #007BFF;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    margin: 20px auto;
-    text-align: center;
-}
-
-/* Ensure Leaders' Images Stay Side by Side */
+/* Leader Cards */
 .leaders-container {
     display: flex;
     justify-content: center;
@@ -62,16 +40,36 @@ body {
     gap: 20px;
 }
 
-/* Responsive Design for Mobile */
-@media screen and (max-width: 768px) {
-    .nav-bar ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
+.leader-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-    .leaders-container {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Dark Mode Button */
+#darkModeToggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #000;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#darkModeToggle:hover {
+    background: #444;
+}
+
+/* Footer */
+footer {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
 }
