@@ -1,28 +1,38 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
     text-align: center;
+    transition: background 0.3s, color 0.3s;
 }
 
 /* Dark Mode */
 .dark-mode {
-    background-color: #121212;
-    color: white;
+    background-color: #222;
+    color: #fff;
 }
 
+/* Center Navigation Bar */
 .header-container {
     background: linear-gradient(to right, #007BFF, #0056b3);
     padding: 20px;
     text-align: center;
+    width: 100%;
 }
 
 .nav-bar ul {
     list-style: none;
+    padding: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-bar ul li {
+    display: inline;
 }
 
 .nav-bar ul li a {
@@ -30,9 +40,38 @@ body {
     color: white;
     font-size: 20px;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
-/* Leader Cards */
+.nav-bar ul li a:hover {
+    color: #FFD700;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #007BFF;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.cta-button {
+    background: #FFD700;
+    color: black;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.cta-button:hover {
+    background: #ffcc00;
+}
+
+/* Leaders Section */
 .leaders-container {
     display: flex;
     justify-content: center;
@@ -40,36 +79,35 @@ body {
     gap: 20px;
 }
 
+/* Leader Cards */
 .leader-card {
     background: white;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 250px;
     text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Dark Mode Button */
+.leader-img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 250px;
+}
+
+/* Dark Mode Toggle Button */
 #darkModeToggle {
     position: fixed;
     top: 10px;
     right: 10px;
-    background: #000;
+    background: black;
     color: white;
-    padding: 10px;
     border: none;
+    padding: 10px;
     cursor: pointer;
-    border-radius: 5px;
 }
 
 #darkModeToggle:hover {
-    background: #444;
-}
-
-/* Footer */
-footer {
-    background-color: #0056b3;
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
+    background: #333;
 }
