@@ -1,4 +1,3 @@
-// DARK MODE TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
     const darkModeToggle = document.getElementById("darkModeToggle");
     const body = document.body;
@@ -29,7 +28,7 @@ function updateEventStatus() {
     const eventsSection = document.querySelector(".events-section");
     const announcementsSection = document.querySelector(".announcements-section");
 
-    document.querySelectorAll(".event-card").forEach(card => {
+    document.querySelectorAll(".event-card, .announcement-card").forEach(card => {
         const eventDate = new Date(card.getAttribute("data-event-date"));
         const statusElement = card.querySelector(".status");
 
