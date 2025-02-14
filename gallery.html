@@ -8,39 +8,44 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Gallery - OGS 2011/2012 Alumni</h1>
-        <nav>
+    <!-- Header & Navigation -->
+    <header class="header-container">
+        <nav class="nav-bar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
-        <h2>📸 Alumni Photo Gallery</h2>
-        <section class="gallery-grid">
-            <img src="./gallery/ogs1.jpg" alt="Gallery Image 1" class="gallery-img" onclick="openModal(this)">
-            <img src="./gallery/ogs2.jpg" alt="Gallery Image 2" class="gallery-img" onclick="openModal(this)">
-            <img src="./gallery/ogs3.jpg" alt="Gallery Image 3" class="gallery-img" onclick="openModal(this)">
-            <img src="./gallery/ogs4.jpg" alt="Gallery Image 4" class="gallery-img" onclick="openModal(this)">
-            <img src="./gallery/ogs5.jpg" alt="Gallery Image 5" class="gallery-img" onclick="openModal(this)">
-            <img src="./gallery/ogs6.jpg" alt="Gallery Image 6" class="gallery-img" onclick="openModal(this)">
-            <img src="./gallery/ogs7.jpg" alt="Gallery Image 7" class="gallery-img" onclick="openModal(this)">
-            <img src="./gallery/ogs8.jpg" alt="Gallery Image 8" class="gallery-img" onclick="openModal(this)">
-            <img src="./gallery/ogs9.jpg" alt="Gallery Image 9" class="gallery-img" onclick="openModal(this)">
-            <img src="./gallery/ogs10.jpg" alt="Gallery Image 10" class="gallery-img" onclick="openModal(this)">
-            <img src="./gallery/ogs11.jpg" alt="Gallery Image 11" class="gallery-img" onclick="openModal(this)">
-            <img src="./gallery/ogs12.jpg" alt="Gallery Image 12" class="gallery-img" onclick="openModal(this)">
-            <img src="./gallery/ogs13.jpg" alt="Gallery Image 13" class="gallery-img" onclick="openModal(this)">
-            <img src="./gallery/ogs14.jpg" alt="Gallery Image 14" class="gallery-img" onclick="openModal(this)">
-            <img src="./gallery/ogs15.jpg" alt="Gallery Image 15" class="gallery-img" onclick="openModal(this)">
-            <img src="./gallery/ogs16.jpg" alt="Gallery Image 16" class="gallery-img" onclick="openModal(this)">
-        </section>
-    </main>
+    <!-- Hero Section -->
+    <section class="gallery-hero">
+        <h1>📸 Alumni Photo Gallery</h1>
+        <p>Explore and relive the best moments from OGS 2011/2012 Alumni.</p>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-grid">
+        <img src="./gallery/ogs1.jpg" class="gallery-img" onclick="openModal(this)">
+        <img src="./gallery/ogs2.jpg" class="gallery-img" onclick="openModal(this)">
+        <img src="./gallery/ogs3.jpg" class="gallery-img" onclick="openModal(this)">
+        <img src="./gallery/ogs4.jpg" class="gallery-img" onclick="openModal(this)">
+        <img src="./gallery/ogs5.jpg" class="gallery-img" onclick="openModal(this)">
+        <img src="./gallery/ogs6.jpg" class="gallery-img" onclick="openModal(this)">
+        <img src="./gallery/ogs7.jpg" class="gallery-img" onclick="openModal(this)">
+        <img src="./gallery/ogs8.jpg" class="gallery-img" onclick="openModal(this)">
+        <img src="./gallery/ogs9.jpg" class="gallery-img" onclick="openModal(this)">
+        <img src="./gallery/ogs10.jpg" class="gallery-img" onclick="openModal(this)">
+        <img src="./gallery/ogs11.jpg" class="gallery-img" onclick="openModal(this)">
+        <img src="./gallery/ogs12.jpg" class="gallery-img" onclick="openModal(this)">
+        <img src="./gallery/ogs13.jpg" class="gallery-img" onclick="openModal(this)">
+        <img src="./gallery/ogs14.jpg" class="gallery-img" onclick="openModal(this)">
+        <img src="./gallery/ogs15.jpg" class="gallery-img" onclick="openModal(this)">
+        <img src="./gallery/ogs16.jpg" class="gallery-img" onclick="openModal(this)">
+    </section>
 
     <!-- Image Modal (Full-Screen) -->
     <div id="imageModal" class="modal">
@@ -53,6 +58,7 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 OGS Alumni. All rights reserved.</p>
     </footer>
