@@ -1,25 +1,37 @@
-/* General Styles */
+/* General Reset */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
     text-align: center;
-    transition: background 0.3s, color 0.3s;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Dark Mode */
-.dark-mode {
-    background-color: #222;
-    color: #fff;
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
 }
 
-/* Center Navigation Bar */
+.dark-mode .header-container,
+.dark-mode footer {
+    background-color: #000000;
+}
+
+.dark-mode .event-card,
+.dark-mode .membership-fee,
+.dark-mode .testimonial,
+.dark-mode .leader-card {
+    background-color: #222222;
+    color: white;
+}
+
+/* Navigation Bar */
 .header-container {
     background: linear-gradient(to right, #007BFF, #0056b3);
     padding: 20px;
     text-align: center;
-    width: 100%;
 }
 
 .nav-bar ul {
@@ -27,7 +39,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
@@ -47,39 +59,46 @@ body {
     color: #FFD700;
 }
 
+/* Dark Mode Toggle */
+#darkModeToggle {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background: #222;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dark-mode #darkModeToggle {
+    background: #ffffff;
+    color: #222;
+}
+
 /* Hero Section */
 .hero-section {
     background-color: #007BFF;
     color: white;
-    padding: 40px;
+    padding: 20px;
     border-radius: 10px;
     width: 80%;
     margin: 20px auto;
 }
 
-.cta-button {
-    background: #FFD700;
-    color: black;
-    padding: 10px 20px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    margin-top: 15px;
+.hero-section h1 {
+    font-size: 32px;
 }
 
-.cta-button:hover {
-    background: #ffcc00;
-}
-
-/* Leaders Section */
+/* Leader Profiles */
 .leaders-container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
-/* Leader Cards */
 .leader-card {
     background: white;
     padding: 20px;
@@ -92,22 +111,24 @@ body {
 .leader-img {
     width: 100%;
     border-radius: 10px;
-    object-fit: cover;
     height: 250px;
+    object-fit: cover;
 }
 
-/* Dark Mode Toggle Button */
-#darkModeToggle {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background: black;
+/* Footer */
+footer {
+    background-color: #0056b3;
     color: white;
-    border: none;
     padding: 10px;
-    cursor: pointer;
 }
 
-#darkModeToggle:hover {
-    background: #333;
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-icons a:hover {
+    text-decoration: underline;
 }
