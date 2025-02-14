@@ -1,33 +1,39 @@
 /* General Reset */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
     text-align: center;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Dark Mode Styles */
+/* Dark Mode */
 body.dark-mode {
     background-color: #121212;
     color: #ffffff;
 }
 
-.dark-mode .header-container,
-.dark-mode footer {
-    background-color: #000000;
-}
-
-.dark-mode .event-card,
-.dark-mode .membership-fee,
-.dark-mode .testimonial,
-.dark-mode .leader-card {
-    background-color: #222222;
+/* Toggle Dark Mode Button */
+#darkModeToggle {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    padding: 10px 15px;
+    background: #007BFF;
     color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 1000;
 }
 
-/* Navigation Bar */
+#darkModeToggle:hover {
+    background: #0056b3;
+}
+
+/* Navigation */
 .header-container {
     background: linear-gradient(to right, #007BFF, #0056b3);
     padding: 20px;
@@ -40,7 +46,6 @@ body.dark-mode {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap;
 }
 
 .nav-bar ul li {
@@ -59,29 +64,11 @@ body.dark-mode {
     color: #FFD700;
 }
 
-/* Dark Mode Toggle */
-#darkModeToggle {
-    position: fixed;
-    top: 10px;
-    right: 20px;
-    background: #222;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.dark-mode #darkModeToggle {
-    background: #ffffff;
-    color: #222;
-}
-
 /* Hero Section */
 .hero-section {
     background-color: #007BFF;
     color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     width: 80%;
     margin: 20px auto;
@@ -91,12 +78,27 @@ body.dark-mode {
     font-size: 32px;
 }
 
-/* Leader Profiles */
+.cta-button {
+    padding: 10px 20px;
+    background: #FFD700;
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background: #FFC107;
+}
+
+/* Leaders Section */
 .leaders-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    padding: 20px;
 }
 
 .leader-card {
@@ -111,8 +113,39 @@ body.dark-mode {
 .leader-img {
     width: 100%;
     border-radius: 10px;
-    height: 250px;
     object-fit: cover;
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+.bio-link {
+    display: inline-block;
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.bio-link:hover {
+    text-decoration: underline;
+}
+
+/* Events Section */
+.events-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 2px solid #007BFF;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.event-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 /* Footer */
@@ -120,6 +153,7 @@ footer {
     background-color: #0056b3;
     color: white;
     padding: 10px;
+    margin-top: 20px;
 }
 
 .social-icons a {
