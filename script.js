@@ -1,3 +1,5 @@
+// This script handles the functionality for the image modal and marking past events on the announcement page
+
 // Open Image Modal
 function openModal(img) {
     let modal = document.getElementById("imageModal");
