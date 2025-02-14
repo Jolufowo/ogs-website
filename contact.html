@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - OGS 2011/2012 Alumni</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
@@ -20,21 +21,40 @@
     </header>
     
     <section class="contact-info-section fade-in">
-        <h2>Get in Touch</h2>
-        <p>Have questions or want to stay connected? We'd love to hear from you! Reach out to us via email or phone.</p>
+        <h2>📞 Get in Touch</h2>
+        <p>Have questions or want to stay connected? We'd love to hear from you! Reach out via email, phone, or WhatsApp.</p>
 
         <p><strong>Email:</strong> <a href="mailto:info@ogs2012alumni.com">info@ogs2012alumni.com</a></p>
         <p><strong>Phone:</strong> <a href="tel:+2348149390170">+234 814 939 0170</a></p>
+        
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/2348149390170" target="_blank">Chat with Us</a></p>
 
-        <p>We look forward to connecting with you!</p>
+        <h3>📍 Our Location</h3>
+        <iframe class="map" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3115.0000000000005!2d3.537000000000001!3d6.807000000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0!2zMTrCsDQzJzIxLjUiTiAzwrAzMScwMC4wIlc!5e0!3m2!1sen!2sng!4v1610000000000"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        <h3>💬 Send Us a Message</h3>
+        <form class="contact-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
     </section>
     
     <footer>
         <p>&copy; 2025 OGS Alumni. All rights reserved.</p>
         <div class="social-icons">
-            <a href="https://facebook.com" target="_blank">Facebook</a>
-            <a href="https://twitter.com" target="_blank">Twitter</a>
-            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://facebook.com" target="_blank" class="social-btn">Facebook</a>
+            <a href="https://twitter.com" target="_blank" class="social-btn">Twitter</a>
+            <a href="https://instagram.com" target="_blank" class="social-btn">Instagram</a>
         </div>
     </footer>
 </body>
