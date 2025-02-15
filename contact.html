@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - OGS 2011/2012 Alumni</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script> <!-- Ensures Dark Mode & Enhancements Work -->
 </head>
 <body>
+
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
+
     <header class="header-container">
+        <h1>Contact Us - OGS 2011/2012 Alumni</h1>
         <nav class="nav-bar">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -19,29 +25,54 @@
         </nav>
     </header>
 
-    <section class="contact-hero">
-        <h1>Get in Touch</h1>
-        <p>We’d love to hear from you! Reach out to us anytime.</p>
+    <!-- Hero Section -->
+    <section class="contact-hero fade-in">
+        <h1>📬 Stay Connected with OGS Alumni</h1>
+        <p>We’d love to hear from you! Whether you have inquiries, suggestions, or would like to collaborate with us, feel free to reach out.</p>
+        <p>Our team is available to assist you and ensure you stay connected with the OGS Alumni community.</p>
     </section>
 
-    <section class="contact-form-section">
-        <div class="contact-info">
+    <!-- Contact Information Section -->
+    <section class="contact-info-section fade-in">
+        <div class="contact-details">
             <h2>📞 Contact Information</h2>
             <p><strong>Email:</strong> <a href="mailto:info@ogs2012alumni.com">info@ogs2012alumni.com</a></p>
             <p><strong>Phone:</strong> <a href="tel:+2348149390170">+234 814 939 0170</a></p>
+            <p><strong>Office Address:</strong> OGS Alumni Secretariat, Odogbolu, Ogun State, Nigeria.</p>
+            <p><strong>Support Hours:</strong> Monday - Friday (9 AM - 5 PM)</p>
         </div>
 
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <h2>🌍 Connect With Us</h2>
+            <p>Follow us on social media to stay updated with the latest news, events, and alumni activities.</p>
+            <a href="https://facebook.com" target="_blank">📘 Facebook</a> |
+            <a href="https://twitter.com" target="_blank">🐦 Twitter</a> |
+            <a href="https://instagram.com" target="_blank">📸 Instagram</a>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section fade-in">
         <h2>📩 Send Us a Message</h2>
+        <p>Fill out the form below, and we’ll get back to you as soon as possible.</p>
         <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">📨 Send Message</button>
         </form>
     </section>
 
     <footer>
         <p>&copy; 2025 OGS Alumni. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
